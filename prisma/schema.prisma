@@ -1,0 +1,25 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model categoriaItem {
+  id_categoria   Int     @id @default(autoincrement())
+  nome_categoria String  @unique
+  cardapioItens  cardapioItens[]
+}
+
+model cardapioItens {
+  id_item         Int     @id @default(autoincrement())
+  nome_item       String
+  descricao_item  String?
+  preco_item      Float
+  vegano_bool     Boolean
+  glutenfree_bool Boolean
+  id_categoria    Int
+  categoria       categoriaItem @relation(fields: [id_categoria], references: [id_categoria])
+}
