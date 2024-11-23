@@ -8,17 +8,19 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Este projeto é uma aplicação Node.js que importa dados de um arquivo CSV para um banco de dados utilizando o Prisma ORM. Ele realiza leitura e validação dos dados do CSV, insere categorias e itens de menu no banco, e gerencia duplicidades com operações de upsert.",
   "devDependencies": {
     "@types/node": "^22.9.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
+    "@types/express": "^5.0.0",
     "csv-parser": "^3.0.0",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "prisma": "^5.22.0"
+    "prisma": "^5.22.0",
+    "ts-node-dev": "^2.0.0"
   }
 }
