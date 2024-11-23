@@ -1,11 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "esModuleInterop": true,
-    "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": true
+    "module": "ESNext",              // Usando módulos ESNext (para compatibilidade com imports/exports)
+    "target": "ESNext",              // Definindo o alvo para ESNext
+    "moduleResolution": "node",      // Usando resolução de módulo do Node
+    "esModuleInterop": true,         // Garantir interoperabilidade entre módulos CommonJS e ES
+    "skipLibCheck": true,            // Ignorar verificações de bibliotecas
+    "allowJs": true,                 // Permite compilar arquivos .js também (se necessário)
+    "strict": true,                  // Habilita checagens de tipo estritas
+    "outDir": "./dist",              // Pasta de saída dos arquivos compilados
+    "rootDir": "./src",              // Diretório de entrada dos arquivos TypeScript
   },
-  "include": ["src/**/*"]
+  "include": [
+    "src"                    // Incluir todos os arquivos TypeScript na pasta src
+  ]
 }

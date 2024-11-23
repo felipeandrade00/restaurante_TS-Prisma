@@ -1,8 +1,7 @@
-import app from './app';
+import app from './app'; // Importe o app configurado no app.ts
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000; // Porta do servidor
 
 app.listen(PORT, () => {
-    console.log(`Servidor iniciado. Porta: ${PORT}`)
+    console.log(`Server is running on port ${PORT}`);
 });
-
